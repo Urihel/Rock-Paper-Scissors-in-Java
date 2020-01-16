@@ -16,11 +16,12 @@ public class myfirstfunctions {
 		Scanner scan = new Scanner(System. in); //instance for user input
 		System.out.print("Enter your Option: ");
 		String playerOne = scan.next();
-		//instance created for the  bot that i will playing against.
-		Random rand = new Random();//instance for the bot we place against 
+		
+		Random rand = new Random();//instance for the bot we place against by generating random numbers
 		String cpu = rpsOptions[rand.nextInt(3)];//generates a random number between 0-2 which are used to access rpsOptions array  
 		System.out.println(cpu);
 		
+		//outcome of the game based on the options the playerOne selects and cpu selects
 		if(playerOne.equals(rpsOptions[0]) && cpu == rpsOptions[2]) {
 			System.out.println("Player One Wins The Game");
 		}else if(playerOne.equals(rpsOptions[1]) && cpu == rpsOptions[0]) {
